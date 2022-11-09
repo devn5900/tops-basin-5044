@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar>.logo>img {
+    width: 30%;
+    cursor: pointer;
+}
+
+#navbar>.search {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: transparent;
+    padding: 0 1px;
+    border: 1px solid lightgray;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 20%;
+}
+
+#navbar>.search:focus {
+    background-color: transparent;
+}
+#navbar>.search>input:focus{
+    background-color: rgba(2, 2, 2, 0.807);
+}
+#navbar>.search>input {
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 17px;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+#navbar>.auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+#navbar>.auth>div {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#navbar>.auth>div>span>a,
+#navbar>.auth>div>ul>li>span>a,
+#navbar>.auth>div>ul>li>#authDrop>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar>.auth>div>span>#cartCount {
+    position: absolute;
+    font-size: 10px;
+    color: black;
+    background-color: white;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 40%;
+}
+
+#authDrop {
+
+    padding: 20px;
+    display: none;
+    position: relative;
+    z-index: 1;
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#authDrop>li {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.auth>div:first-child:hover #authDrop {
+    display: block;
+    background-color: black;
+    position: absolute;
+}
+
+
+/*Nav Bar Links*/
+
+#navLinks {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+}
+#navLinks>.mainLink>h4{
+    cursor: pointer;
+    padding: 15px 10px;
+    margin: 0;
+}
+#navLinks>.mainLink>div {
+    position: absolute;
+    visibility: hidden;
+    display: grid;
+    left: 10%;
+    grid:initial;
+    z-index: 1;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    box-shadow: 0px 05px 8px lightgrey;
+    padding: 20px;
+    gap: 20px;
+    background-color: white;
+}
+
+.visi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navLinks>.mainLink>div>ul {
+    border-top: 1px solid gray;
+    padding: 0;
+}
+
+#navLinks>.mainLink>div>ul>li:first-child {
+    font-weight: bold;
+    margin: 10px;
+    font-size: 15px;
+}
+
+#navLinks>.mainLink>div>ul>li:nth-child(2) {
+    margin-top: 15px;
+}
+
+#navLinks>.mainLink>div>ul>li:nth-child(2)>ul>li {
+    margin-top: 7px;
+}
+
+#navLinks>.mainLink>h3:hover .mainLink>.visi {
+    background-color: red;
+}
+
+
+/* offer links */
+#offerLink{
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;  
+    padding: 20px;
+    border-top: 1px solid gray;
+    background-color: rgba(243, 243, 243, 0.826);
+}
+
+.notify{
+    text-align: center;
+    padding: 1px;
+    background-color: rgba(191, 190, 190, 0.826);
+}
