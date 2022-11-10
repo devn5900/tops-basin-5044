@@ -120,6 +120,7 @@ ul {
     left: 10%;
     grid:initial;
     z-index: 1;
+    border: 2px solid red;
     width: 80%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
