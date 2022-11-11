@@ -2,183 +2,303 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-
 </body>
 <script>
 
-// image silder data
-let slider= [ {
-    "link": "https://static.thcdn.com/images/medium/webp/widgets/208-us/44/1031-STDCRE-43056-DS-WC-November-Batching-Shot-09-Mobile_600x600-021344.jpg",
+  // image silder data
+  let slider = [{
+
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370295-4834866341625108.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Facial Broad-Spectrum SPF 30 Plus - Tube (3 oz.)",
+    "titles": [
+      "EltaMD UV Facial Broad-Spectrum SPF 30 Plus - Tube (3 oz.)"
+    ]
+  },
+  {
+
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370313-1184876993793817.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD Barrier Renewal Complex (1.7 oz.)",
+    "titles": [
+      "EltaMD Barrier Renewal Complex (1.7 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370310-1684944342590145.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Lip Balm BroadSpectrum SPF 36 (0.28 oz.)",
+    "titles": [
+      "EltaMD UV Lip Balm BroadSpectrum SPF 36 (0.28 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370298-8474944344996235.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Physical Broad-Spectrum SPF 41 Sunscreen - Tinted (3 oz.)",
+    "titles": [
+      "EltaMD UV Physical Broad-Spectrum SPF 41 Sunscreen - Tinted (3 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/1600/1600/12538013-4764765050522444.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Clear SPF46 Broad-Spectrum Duo (Worth $72)",
+    "titles": [
+      "EltaMD UV Clear SPF46 Broad-Spectrum Duo (Worth $72)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370307-5484944342267303.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD Foaming Facial Cleanser (7 oz.)",
+    "titles": [
+      "EltaMD Foaming Facial Cleanser (7 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370297-1094944341202318.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Daily Broad-Spectrum SPF 40 (1.7 oz.)",
+    "titles": [
+      "EltaMD UV Daily Broad-Spectrum SPF 40 (1.7 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370305-1094871771745126.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD PM Therapy Facial Moisturizer (1.7 oz.)",
+    "titles": [
+      "EltaMD PM Therapy Facial Moisturizer (1.7 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370311-1644944342668214.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Daily Tinted Broad-Spectrum SPF 40 (1.7 oz.)",
+    "titles": [
+      "EltaMD UV Daily Tinted Broad-Spectrum SPF 40 (1.7 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370314-1304944342872775.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Elements Tinted Broad-Spectrum SPF 44 (2 oz.)",
+    "titles": [
+      "EltaMD UV Elements Tinted Broad-Spectrum SPF 44 (2 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370304-1834876993606203.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD AM Therapy Facial Moisturizer (1.7 oz.)",
+    "titles": [
+      "EltaMD AM Therapy Facial Moisturizer (1.7 oz.)"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/13985789-1635004000024537.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Luminous Broad Spectrum SPF 41, 1 oz",
+    "titles": [
+      "EltaMD UV Luminous Broad Spectrum SPF 41, 1 oz"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/13985788-8294996958046114.jpg",
+    "count": 1,
+    "height": 275,
+    "width": 275,
+    "title": "EltaMD UV Luminous Broad Spectrum SPF 41, 1.7 oz",
+    "titles": [
+      "EltaMD UV Luminous Broad Spectrum SPF 41, 1.7 oz"
+    ]
+  },
+  {
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370312-1044938634157826.jpg",
     "count": 2,
-    "height": 554,
-    "width": 1519,
-    "title": "All Wrapped Up. The best beauty gifts come in limited-edition packages.",
+    "height": 275,
+    "width": 270,
+    "title": "EltaMD UV Clear Broad-Spectrum SPF 46 - Tinted (1.7 oz.)",
     "titles": [
-      "All Wrapped Up. The best beauty gifts come in limited-edition packages."
+      "EltaMD UV Clear Broad-Spectrum SPF 46 - Tinted (1.7 oz.)"
     ]
   },
   {
-    "link": "https://static.thcdn.com/images/medium/webp/widgets/208-us/01/1007-STDCRE-41315-WC-DS-Dermstore-Advent-Calendar-2022-Trading-Gif-600x600-034101.gif",
+    "link": "https://static.thcdn.com/images/small/webp//productimg/original/11370303-1074944341868735.jpg",
     "count": 2,
-    "height": 554,
-    "width": 1519,
-    "title": "25 Days of Beauty. Countdown to the ultimate holiday routine with our Beauty Advent Calendar, featuring 25 days of delightful full & deluxe-size favorites from our most-wanted brands. SHOP NOW",
+    "height": 275,
+    "width": 270,
+    "title": "EltaMD UV Clear Broad-Spectrum SPF 46 (1.7 oz.)",
     "titles": [
-      "25 Days of Beauty. Countdown to the ultimate holiday routine with our Beauty Advent Calendar, featuring 25 days of delightful full & deluxe-size favorites from our most-wanted brands. SHOP NOW"
-    ]
-  },
-  {
-    "link": "https://static.thcdn.com/images/medium/webp/widgets/208-us/20/1031-STDCRE-43056-DS-WC-November-Batching-Shot-02A-Mobile_600x600-020220.jpg",
-    "count": 1,
-    "height": 554,
-    "width": 1519,
-    "title": "‘Tis the Season to Change Things Up. Whether it’s a stronger retinol or a more nourishing moisturizer, get your skin out of a rut by rebooting your routine for next-level results.",
-    "titles": [
-      "‘Tis the Season to Change Things Up. Whether it’s a stronger retinol or a more nourishing moisturizer, get your skin out of a rut by rebooting your routine for next-level results."
-    ]
-  },
-  {
-    "link": "https://static.thcdn.com/images/medium/webp/widgets/208-us/15/1027-STDCRE-42686-DS-EF-Cyber-Waitlist-V1-600x600-082415.jpg",
-    "count": 1,
-    "height": 554,
-    "width": 1519,
-    "title": "Get on the List. Our biggest sale of the year is coming. Join the Black Friday Sale waitlist now & be the first to shop.",
-    "titles": [
-      "Get on the List. Our biggest sale of the year is coming. Join the Black Friday Sale waitlist now & be the first to shop."
-    ]
-  },
-  {
-    "link": "https://static.thcdn.com/images/medium/webp/widgets/208-us/21/1031-STDCRE-43056-DS-WC-November-Batching-Shot-02-Mobile_600x600-094821.jpg",
-    "count": 1,
-    "height": 554,
-    "width": 1519,
-    "title": "For Your Very Nice List. Go ahead & splurge: Treat them to everything on their list with more time to pay. Checkout with Klarna & Afterpay to take advantage of four, interest-free payments.",
-    "titles": [
-      "For Your Very Nice List. Go ahead & splurge: Treat them to everything on their list with more time to pay. Checkout with Klarna & Afterpay to take advantage of four, interest-free payments."
+      "EltaMD UV Clear Broad-Spectrum SPF 46 (1.7 oz.)"
     ]
   }];
+  ///////////////////////////////
+  //   product data
+  let data = [
+    {
 
-//   product data
-    let data = [
-        {
-            "id": 16,
-            "title": "Hyaluronic Acid Serum",
-            "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
-            "price": 19,
-            "discountPercentage": 13.31,
-            "rating": 4.83,
-            "stock": 110,
-            "brand": "L'Oreal Paris",
-            "category": "skincare",
-            "thumbnail": "https://dummyjson.com/image/i/products/16/thumbnail.jpg",
-            "images": [
-                "https://dummyjson.com/image/i/products/16/1.png",
-                "https://dummyjson.com/image/i/products/16/2.webp",
-                "https://dummyjson.com/image/i/products/16/3.jpg",
-                "https://dummyjson.com/image/i/products/16/4.jpg",
-                "https://dummyjson.com/image/i/products/16/thumbnail.jpg"
-            ]
-        },
-        {
-            "id": 17,
-            "title": "Tree Oil 30ml",
-            "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
-            "price": 12,
-            "discountPercentage": 4.09,
-            "rating": 4.52,
-            "stock": 78,
-            "brand": "Hemani Tea",
-            "category": "skincare",
-            "thumbnail": "https://dummyjson.com/image/i/products/17/thumbnail.jpg",
-            "images": [
-                "https://dummyjson.com/image/i/products/17/1.jpg",
-                "https://dummyjson.com/image/i/products/17/2.jpg",
-                "https://dummyjson.com/image/i/products/17/3.jpg",
-                "https://dummyjson.com/image/i/products/17/thumbnail.jpg"
-            ]
-        },
-        {
-            "id": 18,
-            "title": "Oil Free Moisturizer 100ml",
-            "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
-            "price": 40,
-            "discountPercentage": 13.1,
-            "rating": 4.56,
-            "stock": 88,
-            "brand": "Dermive",
-            "category": "skincare",
-            "thumbnail": "https://dummyjson.com/image/i/products/18/thumbnail.jpg",
-            "images": [
-                "https://dummyjson.com/image/i/products/18/1.jpg",
-                "https://dummyjson.com/image/i/products/18/2.jpg",
-                "https://dummyjson.com/image/i/products/18/3.jpg",
-                "https://dummyjson.com/image/i/products/18/4.jpg",
-                "https://dummyjson.com/image/i/products/18/thumbnail.jpg"
-            ]
-        },
-        {
-            "id": 19,
-            "title": "Skin Beauty Serum.",
-            "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
-            "price": 46,
-            "discountPercentage": 10.68,
-            "rating": 4.42,
-            "stock": 54,
-            "brand": "ROREC White Rice",
-            "category": "skincare",
-            "thumbnail": "https://dummyjson.com/image/i/products/19/thumbnail.jpg",
-            "images": [
-                "https://dummyjson.com/image/i/products/19/1.jpg",
-                "https://dummyjson.com/image/i/products/19/2.jpg",
-                "https://dummyjson.com/image/i/products/19/3.png",
-                "https://dummyjson.com/image/i/products/19/thumbnail.jpg"
-            ]
-        },
-        {
-            "id": 20,
-            "title": "Freckle Treatment Cream- 15gm",
-            "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
-            "price": 70,
-            "discountPercentage": 16.99,
-            "rating": 4.06,
-            "stock": 140,
-            "brand": "Fair & Clear",
-            "category": "skincare",
-            "thumbnail": "https://dummyjson.com/image/i/products/20/thumbnail.jpg",
-            "images": [
-                "https://dummyjson.com/image/i/products/20/1.jpg",
-                "https://dummyjson.com/image/i/products/20/2.jpg",
-                "https://dummyjson.com/image/i/products/20/3.jpg",
-                "https://dummyjson.com/image/i/products/20/4.jpg",
-                "https://dummyjson.com/image/i/products/20/thumbnail.jpg"
-            ]
-        }
-    ];
+      "price": 19,
+      "discountPercentage": 13.31,
+      "rating": 4.83,
+      "stock": 110,
+      "category": "skincare",
+
+    },
+    {
+      "id": 17,
+      "title": "Tree Oil 30ml",
+      "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
+      "price": 12,
+      "discountPercentage": 4.09,
+      "rating": 4.52,
+      "stock": 78,
+      "brand": "Hemani Tea",
+      "category": "skincare",
+      "thumbnail": "https://dummyjson.com/image/i/products/17/thumbnail.jpg",
+      "images": [
+        "https://dummyjson.com/image/i/products/17/1.jpg",
+        "https://dummyjson.com/image/i/products/17/2.jpg",
+        "https://dummyjson.com/image/i/products/17/3.jpg",
+        "https://dummyjson.com/image/i/products/17/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Oil Free Moisturizer 100ml",
+      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
+      "price": 40,
+      "discountPercentage": 13.1,
+      "rating": 4.56,
+      "stock": 88,
+      "brand": "Dermive",
+      "category": "skincare",
+      "thumbnail": "https://dummyjson.com/image/i/products/18/thumbnail.jpg",
+      "images": [
+        "https://dummyjson.com/image/i/products/18/1.jpg",
+        "https://dummyjson.com/image/i/products/18/2.jpg",
+        "https://dummyjson.com/image/i/products/18/3.jpg",
+        "https://dummyjson.com/image/i/products/18/4.jpg",
+        "https://dummyjson.com/image/i/products/18/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Skin Beauty Serum.",
+      "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
+      "price": 46,
+      "discountPercentage": 10.68,
+      "rating": 4.42,
+      "stock": 54,
+      "brand": "ROREC White Rice",
+      "category": "skincare",
+      "thumbnail": "https://dummyjson.com/image/i/products/19/thumbnail.jpg",
+      "images": [
+        "https://dummyjson.com/image/i/products/19/1.jpg",
+        "https://dummyjson.com/image/i/products/19/2.jpg",
+        "https://dummyjson.com/image/i/products/19/3.png",
+        "https://dummyjson.com/image/i/products/19/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Freckle Treatment Cream- 15gm",
+      "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
+      "price": 70,
+      "discountPercentage": 16.99,
+      "rating": 4.06,
+      "stock": 140,
+      "brand": "Fair & Clear",
+      "category": "skincare",
+      "thumbnail": "https://dummyjson.com/image/i/products/20/thumbnail.jpg",
+      "images": [
+        "https://dummyjson.com/image/i/products/20/1.jpg",
+        "https://dummyjson.com/image/i/products/20/2.jpg",
+        "https://dummyjson.com/image/i/products/20/3.jpg",
+        "https://dummyjson.com/image/i/products/20/4.jpg",
+        "https://dummyjson.com/image/i/products/20/thumbnail.jpg"
+      ]
+    }
+  ];
 
 
+  let arr = ["Cream", "SkinCeuticals", "EltaMD", "SkinMedica", "Obagi", "iS Clinical", "Eminence", "Organic", "Skin Care", "Revision", "Skincare", "Neocutis", "Oribe", "Sunday Riley", "PCA SKIN"];
+  console.log(arr.length);
+  console.log(slider.length);
 
+  slider.forEach((el) => {
+    el["desc"] = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio animi ducimus voluptas accusamus quis necessitatibus.";
+    delete el["height"];
+    delete el["titles"];
+    delete el["width"];
+    el["price"] = (Math.random() * 999 + 100).toFixed(2);
+    el["rating"] = (Math.random() * 9).toFixed(2);
 
-    // fetch('https://example.com/profile', {
-    //     method: 'POST', // or 'PUT'
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(data),
-    // })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         console.log('Success:', data);
-    //     })
-    //     .catch((error) => {
-    //         console.error('Error:', error);
-    //     });
+  })
+  slider.forEach((el, i) => {
+    el["category"] = arr[i];
+    el["id"] = i + 1;
+  })
+
+  localStorage.setItem("demo", JSON.stringify(slider));
+  let st = JSON.parse(localStorage.getItem("demo"));
+  console.log(st);
+  st.forEach((el) => {
+
+    fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore', {
+      method: 'POSt', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(el),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  })
 </script>
 
 </html>
+
+
+
+"Cream","SkinCeuticals","EltaMD","SkinMedica",
+"Obagi","iS Clinical"
+,"Eminence","Organic","Skin Care","Revision",
+"Skincare","Neocutis","Neocutis","Sunday Riley","PCA SKIN"
