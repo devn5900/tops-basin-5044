@@ -380,3 +380,8 @@ let lg= JSON.parse(localStorage.getItem("signup"));
     console.log("logout")
     window.location.reload();
 });
+document.querySelector("#srbtn").addEventListener("click",()=>{
+  console.log(window.location);
+  window.location=`../sections/search.html?search=${document.querySelector("#search").value}`;
+})
+
