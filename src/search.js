@@ -23,10 +23,39 @@ filter.forEach((el) => {
     })
 })
 
+/////////////// get from url
 
+let url=window.location.search;
+let urlpara = new URLSearchParams(url);
+let searchData=urlpara.get("search");
+let mainData;
+fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
+  .then((response) => response.json())
+  .then((data) => {
+    // console.log('Success:', data);
+    slData(data)
+   let fill= data.filter((el)=>{
+         if(el.title.toLowerCase().match(searchData.toLowerCase())||el.desc.toLowerCase().match(searchData.toLowerCase())||el.category.toLowerCase().match(searchData.toLowerCase())){
+            return el;
+         }
+    });
+    console.log(fill);
+    document.querySelector("#searFor").innerText='Searching for  "'+searchData+'"';
+    document.querySelector("#totalRe").innerText= " Total Result: "+fill.length;
+    showData(fill);
+    mainData=fill;
+
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+  console.log(mainData);
+/////////////////////
 function showData(elment) {
     let item = document.querySelector("#allProd");
     item.innerHTML = '';
+
     elment.forEach((el) => {
         let div = document.createElement("div");
 
@@ -64,26 +93,16 @@ function showData(elment) {
         div.append(img, p, p1, p2, bbtt);
         
         item.append(div);
-
     })
+  
 
 }
 
-let mainData;
-fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
-  .then((response) => response.json())
-  .then((data) => {
-    // console.log('Success:', data);
-    mainData=data;
-    slData(data)
-    showData(data)
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+
 function slData(elment){
     let item=document.querySelector("#eltaCart");
     item.innerHTML='';
+    
     elment.forEach((el)=>{
         let div= document.createElement("div");
         div.setAttribute("class","transform");
@@ -213,28 +232,29 @@ let flag=false;
   }
 }
 
-  function alertBox(msg,color){
-    let alert= document.querySelector("#alert");
-    alert.style.visibility="visible";
-    innerHTML='';
-    alert.style.backgroundColor=color;
-    let span=document.createElement("span");
-    span.innerText=msg;
-    let span2=document.createElement("span");
-    span2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark"></i>`;
   
-    alert.append(span,span2);
-    alert.style.transform="translateX(-50%)";
+function alertBox(msg,color){
+  let alert= document.querySelector("#alert");
+  alert.style.visibility="visible";
+  innerHTML='';
+  alert.style.backgroundColor=color;
+  let span=document.createElement("span");
+  span.innerText=msg;
+  let span2=document.createElement("span");
+  span2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark"></i>`;
+
+  alert.append(span,span2);
+  alert.style.transform="translateX(-50%)";
+  setTimeout(() => {
+    alert.style.transform="translateX(150%)";
     setTimeout(() => {
-      alert.style.transform="translateX(150%)";
-      setTimeout(() => {
-        
-        alert.innerHTML='';
-    alert.style.visibility="hidden";
-  
-      }, 1050);
-  }, 1000);
-  }
+      
+      alert.innerHTML='';
+  alert.style.visibility="hidden";
+
+    }, 1050);
+}, 1000);
+}
 changeCartValue();
 function changeCartValue(){
 

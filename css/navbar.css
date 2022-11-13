@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: start;
     background-color: transparent;
-    padding: 0 1px;
+    padding: 0 7px;
     border: 1px solid lightgray;
     overflow: hidden;
     border-radius: 8px;
@@ -35,8 +35,17 @@
 #navbar>.search:focus {
     background-color: transparent;
 }
+#navbar>.search>input:active{
+    background-color: rgba(2, 2, 2, 0.807);
+
+}
 #navbar>.search>input:focus{
     background-color: rgba(2, 2, 2, 0.807);
+}
+#navbar>.search>span {
+
+    padding:10px;
+   cursor: pointer;
 }
 #navbar>.search>input {
     padding: 10px;

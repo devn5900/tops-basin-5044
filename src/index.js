@@ -7,6 +7,15 @@ link.forEach((el, index) => {
     el.childNodes[3].style.visibility = "hidden";
   })
 });
+if(localStorage.getItem("signup")==undefined){
+
+  localStorage.setItem("signup",JSON.stringify([{
+    name:"devn",
+    email:"devn5900@gmail.com",
+    stat:false,
+    password:"5900"
+  }]));
+}
 
 let slider = [
   {
@@ -145,7 +154,7 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
 
         let p= document.createElement("p");
         p.innerText=el.title;
-
+  
         let p1= document.createElement("p");
         p1.innerHTML=`<i class="fa-sharp fa-solid fa-star"></i>
         <i class="fa-sharp fa-solid fa-star"></i>
@@ -164,7 +173,6 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
         button.innerText="QUICK BUY";
       button.addEventListener("click",()=>{
         addtoCart(el);
-        console.log("click from display");
 
       })
 
@@ -179,7 +187,6 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
   function showData(elment){
     let item=document.querySelector("#eltaCart");
     item.innerHTML='';
-    console.log(elment);
     elment.forEach((el)=>{
         let div= document.createElement("div");
         div.setAttribute("class","transform");
@@ -189,6 +196,7 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
 
         let p= document.createElement("p");
         p.innerText=el.title;
+      
 
         let p1= document.createElement("p");
         p1.innerHTML=`<i class="fa-sharp fa-solid fa-star"></i>
@@ -208,7 +216,6 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
         bbtt.innerText="QUICK BUY";
         bbtt.addEventListener("click",()=>{
           addtoCart(el);
-          console.log("click from ShowData");
         });
 
         div.append(img,p,p1,p2,bbtt);
@@ -232,7 +239,6 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
           el.style.transform="translateX(-100%)";
           }
         // el.style.transition="transform 2s ease-in-out";
-        console.log(el.style.transform);
        
       })
     })
@@ -256,7 +262,6 @@ fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore')
 
     btndiv.append(prevb,nextb);
     item.appendChild(btndiv)
-    console.log(btndiv);
 
   }
 ////////////////////////////////////////////////
@@ -266,38 +271,106 @@ function changeCartValue(){
   let  cartC = JSON.parse(localStorage.getItem("AwadhStoreCart"))||[];
   document.querySelector("#cartCount").innerText=cartC.length;
 }
-  function addtoCart(el){
-    let cart = JSON.parse(localStorage.getItem("AwadhStoreCart"))||[];
+
+function addtoCart(el){
+  let cart = JSON.parse(localStorage.getItem("AwadhStoreCart"))||[];
+let flag=false;
+  cart.forEach((ele)=>{
+    if(el.id==ele.id){
+     flag=true;
+     return;
+    }
+  });
+  if(flag==true){
+    alertBox("Product is already in cart","#F45D37")
+  }else{
+    el["subtotal"]=el.price;
     cart.push(el);
-    console.log(cart);
     localStorage.setItem("AwadhStoreCart",JSON.stringify(cart));
     changeCartValue();
-    alertBox("Product Added To the Card","lightcoral")
+    alertBox("Product Added To the Card","#36946F")
   }
-
-
-function alertBox(msg,color){
-    let alert= document.querySelector("#alert");
-    alert.style.visibility="visible";
-    innerHTML='';
-    alert.style.backgroundColor=color;
-    let span=document.createElement("span");
-    span.innerText=msg;
-    let span2=document.createElement("span");
-    span2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark"></i>`;
-
-    alert.append(span,span2);
-    alert.style.transform="translateX(-50%)";
-    setTimeout(() => {
-      alert.style.transform="translateX(150%)";
-      setTimeout(() => {
-        
-        alert.innerHTML='';
-    alert.style.visibility="hidden";
-      }, 1800);
-  }, 1700);
 }
 
+function alertBox(msg,color){
+  let alert= document.querySelector("#alert");
+  alert.style.visibility="visible";
+  innerHTML='';
+  alert.style.backgroundColor=color;
+  let span=document.createElement("span");
+  span.innerText=msg;
+  let span2=document.createElement("span");
+  span2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark"></i>`;
+
+  alert.append(span,span2);
+  alert.style.transform="translateX(-50%)";
+  setTimeout(() => {
+    alert.style.transform="translateX(150%)";
+    setTimeout(() => {
+      
+      alert.innerHTML='';
+  alert.style.visibility="hidden";
+
+    }, 1050);
+}, 1000);
+}
 document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".webInfo").style.visibility="hidden";
 })
+
+
+let logo=  JSON.parse(localStorage.getItem("signup"));
+console.log(logo);
+
+let lg=false;
+let userName='';
+logo.forEach((el)=>{
+    if(el.stat==true){
+        lg=true;   
+        userName=el.name;
+        return;
+     }
+});
+if(lg==true){
+  document.querySelector("#userName").innerText=userName;
+  let authDrop=document.querySelector("#authDrop");
+authDrop.innerHTML='';
+  let li= document.createElement("li");
+let a=document.createElement("a");
+a.setAttribute("id","logout");
+a.setAttribute("href","#");
+a.innerHTML=`<i class="fa-solid fa-user-secret"></i> &nbsp; Log Out`;
+
+li.append(a);
+  authDrop.append(li);
+  
+}else{
+  document.querySelector("#userName").innerText="Account";
+  let authDrop=document.querySelector("#authDrop");
+  innerHTML='';
+  let li= document.createElement("li");
+  let a=document.createElement("a");
+  a.setAttribute("id","logout");
+  a.setAttribute("href","./sections/loginSign.html");
+  a.innerText="Sign Up/Log In";
+  li.append(a);
+  authDrop.append(li);
+}
+document.querySelector("#logout").addEventListener("click",()=>{
+let lg= JSON.parse(localStorage.getItem("signup"));
+  lg.forEach((el)=>{
+    if(el.stat==true){
+      el.stat=false;   
+      return;
+   }
+    });
+    localStorage.setItem("signup",JSON.stringify(lg));
+    console.log("logout")
+});
+
+document.querySelector("#srbtn").addEventListener("click",()=>{
+  console.log(window.location);
+  window.location=`../sections/search.html?search=${document.querySelector("#search").value}`;
+})
+
+

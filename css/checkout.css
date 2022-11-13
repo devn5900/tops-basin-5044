@@ -1,0 +1,36 @@
+.del{
+    width: 40%;
+    box-shadow: 0px 3px 8px white;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    
+}
+#p{
+    background-color: rgb(244, 244, 244);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.paymentCard>form>div:nth-child(even){
+        display: flex;
+        flex-direction: column;
+}
+.paymentCard>form>div:nth-child(even) label{
+
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.paymentCard>form>div:nth-child(even) input{
+
+    padding: 15px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.paymentCard>form>div:nth-child(even) input[type="submit"]{
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

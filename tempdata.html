@@ -263,6 +263,7 @@
     delete el["height"];
     delete el["titles"];
     delete el["width"];
+    el["count"]=1;
     el["price"] = (Math.random() * 999 + 100).toFixed(2);
     el["rating"] = (Math.random() * 9).toFixed(2);
 
@@ -278,7 +279,7 @@
   st.forEach((el) => {
 
     fetch('https://636a539ec07d8f936d9a5d5e.mockapi.io/awadhStore/awadhStore', {
-      method: 'POSt', // or 'PUT'
+      method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
       },

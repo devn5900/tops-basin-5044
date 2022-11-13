@@ -1,0 +1,98 @@
+.cartDetail{
+    width: 90%;
+    margin: auto;
+}
+.cartDetail>.itemHead{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cartDetail>.itemHead>div:nth-child(2){
+display: flex;
+width: 50%;
+padding-right: 50px;
+margin-right: 50px;
+justify-content: space-around;
+}
+.itemsCart{
+    display: flex;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.itemsCart>div:first-child{
+    padding: 10px;
+ 
+    width: 30%;
+}
+.itemsCart>div>img{
+    width: 50px;
+    margin-right: 20px;
+}
+.itemsCart>div{
+    display: flex;
+    width: 50%;
+    /* padding-right: 50px; */
+    margin-right: 20px;
+    justify-content: space-between;
+}
+.itemsCart>div:nth-child(2)>span:nth-child(4){
+    background-color: lightgray;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+.itemsCart>div:nth-child(2)>span:nth-child(2){
+    /* background-color: yellowgreen; */
+    display: flex;
+    width: 10%;
+    font-size: 15px;
+    justify-content: space-between;
+}
+.itemsCart>div:nth-child(2)>span:nth-child(2)>span:nth-child(odd){
+    background-color: lightgray;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+.itemsCart>div:nth-child(2)>span:nth-child(2)>span:nth-child(even){
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.cartDetai>.sub{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    margin-top: 20px;
+    justify-content:flex-end;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cartDetai>.sub>div{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cartDetai>.sub>div:nth-child(2)>a{
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: black;
+}
+.cartDetai>.sub>div:nth-child(2)>a:hover{
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+}

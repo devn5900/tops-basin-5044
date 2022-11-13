@@ -9,81 +9,23 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" type="image/x-icon" href="./logo/Loyal (1).png">
-    <title>Awadh Store</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="icon" type="image/x-icon" href="../logo/Loyal (1).png">
+    <title>Search Result</title>
 </head>
 
 <body>
     <div id="alert">
 
     </div>
-    <div class="webInfo">
-        <div class="full">
 
-            <div class="close">
-                <i class="fa-sharp fa-solid fa-xmark"></i>
-            </div>
-            <div>
-                <h1>Project Details</h1>
-
-                <table>
-                    <tr>
-                        <th>Project Name </th>
-                        <td>Awadh Store</td>
-                    </tr>
-                    <tr>
-                        <th>Project Code </th>
-                        <td>tops-basin-5044</td>
-                    </tr>
-                    <tr>
-                        <th>IA Name</th>
-                        <td>Adarsha Khatua</td>
-                    </tr>
-                    <tr>
-                        <th>Original Website</th>
-                        <td><a target="_blank" href="https://www.dermstore.com/">DermStore</a></td>
-                    </tr>
-                    <tr>
-                        <th>Student Name </th>
-                        <td>Devesh Kumar Mishra</td>
-                    </tr>
-                    <tr>
-                        <th>Student Code</th>
-                        <td>FW22_0044</td>
-                    </tr>
-
-                </table>
-            </div>
-            <div>
-                <h1>Functional Parts of Project</h1>
-                <table>
-                    <tr>
-                        <th>Navigation Bar</th>
-                        <td>Best Seller, Products Page</td>
-                    </tr>
-                    <tr>
-                        <th>Account</th>
-                        <td>Search, Sign Up, Log In, Cart</td>
-                    </tr>
-                    <tr>
-                        <th>2x Points on EltaMD</th>
-                        <td>You can add Product into Cart</td>
-
-                    </tr>
-                    <tr>
-                        <th>Bestsellers</th>
-                        <td>You can add Product into Cart</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
     <header>
         <div id="navbar">
             <div class="logo">
-                <a href="./index.html"><img src="../logo/Loyal (1).png" alt="Awadh Store"></a>
+                <a href="../index.html"><img src="../logo/Loyal (1).png" alt="Awadh Store"></a>
 
             </div>
             <div class="search">
@@ -100,7 +42,7 @@
                         </li>
                         <li>
                             <ul id="authDrop">
-
+                                 
                             </ul>
                         </li>
                     </ul>
@@ -441,22 +383,78 @@
                 START EARNING</h5>
         </div>
     </header>
-    <section>
-        <div class="navigateSlider" id="navi">
+   <section>
+        <div class="for">
+            <h1 id="searFor"></h1>
+            <h4 id="totalRe"></h4>
+        </div>
+   </section>
+    <section id="allPro">
+        <div class="refine">
             <div>
-                <span id="prev"><i class="fa-solid fa-caret-left"></i></span>
-                <span id="next"><i class="fa-solid fa-caret-right"></i></span>
+                <h4>Refine</h4>
+
+            </div>
+            <div>
+                <h3>Select Product Type</h3>
+                <input type="radio" name="filter" id="Cream" value="Cream">
+                <label for="Cream">Cream</label><br>
+
+                <input type="radio" name="filter" id="SkinCeuticals" value="SkinCeuticals">
+                <label for="SkinCeuticals">SkinCeuticals</label><br>
+
+                <input type="radio" name="filter" id="EltaMD" value="EltaMD">
+                <label for="EltaMD">EltaMD</label><br>
+
+                <input type="radio" name="filter" id="SkinMedica" value="SkinMedica">
+                <label for="SkinMedica">SkinMedica</label><br>
+
+                <input type="radio" name="filter" id="Eminence" value="Eminence">
+                <label for="Eminence">Eminence</label><br>
+
+                <input type="radio" name="filter" id="Organic" value="Organic">
+                <label for="Organic">Organic</label><br>
+
+                <input type="radio" name="filter" id="SkinCare" value="Skin Care">
+                <label for="SkinCare">Skin Care</label><br>
+
+                <input type="radio" name="filter" id="Revision" value="Revision">
+                <label for="Revision">Revision</label><br>
+
+                <input type="radio" name="filter" id="Skincare" value="Skincare">
+                <label for="Skincare">Skincare</label><br>
+
+                <input type="radio" name="filter" id="Neocutis" value="Neocutis">
+                <label for="Neocutis">Neocutis</label><br>
+
+                <input type="radio" name="filter" id="Neocutis" value="Neocutis">
+                <label for="Neocutis">Neocutis</label><br>
+
+                <input type="radio" name="filter" id="SundayRiley" value="Sunday Riley">
+                <label for="SundayRiley">Sunday Riley</label><br>
+
+                <input type="radio" name="filter" id="PCASKIN" value="PCA SKIN">
+                <label for="PCASKIN">PCA SKIN</label><br>
+            </div>
+            <div>
+                <h3>Sort By Price</h3>
+               <select id="sortBy">
+                <option value=" ">Default</option>
+                <option value="LtH">Low to High</option>
+                <option value="Htl">High to Low</option>
+               </select>
+            </div>
+            <div>
+                <h3>Sort By Rating</h3>
+               <select id="sortByRating">
+                <option value=" ">Default</option>
+                <option value="LtH">Low to High</option>
+                <option value="Htl">High to Low</option>
+               </select>
             </div>
         </div>
-        <div class="slideBanner" id="slideBanner">
-            <img src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/15/original-1031-STDCRE-43056-DS-WC-November-Batching-Shot-02A-HomePage_1920x700-020215.jpg"
-                alt="">
-            <div class="sliderInfo">
-                <h1>‘Tis the Season to Change Things Up</h1>
-                <p> Whether it’s a stronger retinol or a more nourishing moisturizer, get your skin out of a rut by
-                    rebooting your routine for next-level results.</p>
-                <button>Shop Now</button>
-            </div>
+        <div class="allProd" id="allProd">
+           
         </div>
     </section>
     <section>
@@ -470,169 +468,40 @@
                         alt="">
                 </div>
                 <div class="eltaCart" id="eltaCart">
-
-
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <div class="categoryHead">
-
-            <h1>Shop By Category</h1>
-        </div>
-        <div id="category">
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/20/DS_Round_Nav_-_Untitled_Page_%287%29-052520.png"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/36/DS_Round_Nav_-_Untitled_Page_%2833%29-085536.png"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/32/DS_Round_Nav_-_Untitled_Page_%289%29-052632.png"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/03/DS_Round_Nav_-_Untitled_Page_%2810%29-052703.png"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/49/DS_Round_Nav_-_Untitled_Page_%2813%29-053649.png"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/36/DS_Round_Nav_-_Untitled_Page_%2825%29-063536.png"
-                    alt="">
-            </div>
-        </div>
-        <div class="holiday">
-            <img src="https://static.thcdn.com/images/large/webp/widgets/208-us/26/original-Holiday_Shop_Disrupter_%28long%29-045226.png"
-                alt="">
-        </div>
-    </section>
-    <section id="bes">
-        <div id="pro">
-            <h1>Bestsellers</h1>
-            <div class="p ">
-
-                <div class="product swiper mySwiper swiper-wrapper">
-                    <div id="item" class="productItem swiper-wrapper">
-
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="categoryHead">
-            <h1>Get Ready for the Black Friday Sale on November 19th</h1>
-        </div>
-        <div id="join">
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/10/Rewards_%281%29-070210.png"
-                    alt="">
-                <h3>Earn 250 Points, NOW</h3>
-                <p>Get instant points just for becoming a Rewards member. Plus, access to even more during our Black
-                    Friday Sale.</p>
-                <button>Join Now</button>
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/06/1027-STDCRE-42686-DS-EF-Cyber-Waitlist-V3-676x556-090706.jpg"
-                    alt="">
-                <h3>Get Ready to Save</h3>
-                <p>Download the Dermstore App to be among the first to shop The Black Friday Sale.</p>
-                <button>Download Now</button>
-
-
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/47/RAF-090647.png" alt="">
-                <h3>Give Your Friend A Free Gift</h3>
-                <p>For a limited time, earn $20 for each friend you introduce to us & they'll enjoy 15% off.</p>
-                <button>SIGN UP</button>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="feat">
-        <div class="categoryHead">
-            <h1>Featured Brands</h1>
-        </div>
-        <div id="featured">
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/19/SR-logo_2000x2000-060919.jpg"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/59/Skinc-014559.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/34/original-220322-ELTAMD-LOGO-RGB-01_%28002%29-014534.png"
-                    alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/09/Chantecaille-033909.png" alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/08/SkinMedica-014608.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/21/augustinusbader-124221.gif"
-                    alt="">
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <section id="si">
+       <section id="si">
+        <div>
+            <p>Sign up to our newsletters and receive the latest exclusive discounts and deals</p>
+            <a href="./loginSign.html">Sign me up</a>
+        </div>
+        <div>
+            <p>Connect with us</p>
             <div>
-                <p>Sign up to our newsletters and receive the latest exclusive discounts and deals</p>
-                <a href="./sections/loginSign.html">Sign me up</a>
+                <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
+                    <path class="eastendFooterSocialIcons_listItemSvgPath-grey" d="M17.0680736,16.6145435 L17.0680736,14.6052554 C17.0680736,13.7187702 17.0904121,12.3525954 17.7335254,11.5060843 C18.4119099,10.6090177 19.3418964,10 20.9432132,10 C23.5509376,10 24.6490506,10.3715243 24.6490506,10.3715243 L24.132914,13.4342484 C24.132914,13.4342484 23.2711187,13.1861737 22.4669332,13.1861737 C21.6627476,13.1861737 20.9432132,13.4742226 20.9432132,14.2772324 L20.9432132,16.6145435 L24.2399036,16.6145435 L24.0094645,19.6055494 L20.9432132,19.6055494 L20.9432132,30 L17.0680736,30 L17.0680736,19.6055494 L15,19.6055494 L15,16.6145435 L17.0680736,16.6145435 Z" id="Facebook" fill="#FFFFFF"></path>
+                  </svg>
+                  
+                  <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle id="Oval-2-Copy-2" class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
+                    <path class="eastendFooterSocialIcons_listItemSvgPath-grey" d="M27.3656846,14.7303293 C28.1998845,14.2311958 28.8399769,13.4385904 29.1415367,12.4969382 C28.3604853,12.9590988 27.4974003,13.2941652 26.5753899,13.4744079 C25.8405546,12.6910456 24.7902946,12.2 23.6279607,12.2 C21.3991912,12.2 19.5909879,14.0093588 19.5909879,16.2392837 C19.5909879,16.5558637 19.6256499,16.8632005 19.694974,17.1589832 C16.3385326,16.9891392 13.3633738,15.3842865 11.3703062,12.9371462 C11.0225303,13.5367995 10.8238013,14.2311958 10.8238013,14.9706528 C10.8238013,16.369844 11.536684,17.607279 12.6204506,18.3317158 C11.9595609,18.3120739 11.3356441,18.1295205 10.7902946,17.8279607 L10.7902946,17.877643 C10.7902946,19.8348931 12.1825534,21.4674754 14.0311958,21.8383593 C13.6926632,21.9331023 13.3356441,21.9804737 12.9670711,21.9804737 C12.7071057,21.9804737 12.4529174,21.9562103 12.2068169,21.9088388 C12.7209705,23.5125361 14.2114385,24.680647 15.9792028,24.7129983 C14.5973426,25.7956095 12.8549971,26.4414789 10.9636049,26.4414789 C10.6377816,26.4414789 10.3154246,26.4229925 10,26.3860196 C11.7874061,27.5310225 13.9110341,28.2 16.1906412,28.2 C23.6198729,28.2 27.6811092,22.0463316 27.6811092,16.7072213 C27.6811092,16.5327556 27.677643,16.3571346 27.6707106,16.1849798 C28.4598498,15.6153668 29.1450029,14.9047949 29.6845754,14.0937031 C28.961294,14.4160601 28.1825534,14.6321202 27.3656846,14.7303293 Z" id="Twitter" fill="#FFFFFF"></path>
+                  </svg>
+                  <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
+                    <path class="eastendFooterSocialIcons_listItemSvgPath-grey" d="M17,23.6363636 L17,16.3636364 L23,20.000139 L17,23.6363636 Z M31.4984545,14.4984516 C31.2224545,13.5149677 30.4091818,12.7405161 29.3766364,12.4776774 C27.5050455,12 20,12 20,12 C20,12 12.4949545,12 10.6233636,12.4776774 C9.59081818,12.7405161 8.77754545,13.5149677 8.50154545,14.4984516 C8,16.2809032 8,20 8,20 C8,20 8,23.7189677 8.50154545,25.5015484 C8.77754545,26.4850323 9.59081818,27.2594839 10.6233636,27.5224516 C12.4949545,28 20,28 20,28 C20,28 27.5050455,28 29.3766364,27.5224516 C30.4091818,27.2594839 31.2224545,26.4850323 31.4984545,25.5015484 C32,23.7189677 32,20 32,20 C32,20 32,16.2809032 31.4984545,14.4984516 Z" fill="#FFFFFE"></path>
+                 </svg><svg class="eastendFooterSocialIcons_listItemSvg" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                    <g fill="none" fill-rule="evenodd">
+                      <circle class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
+                      <path class="eastendFooterSocialIcons_listItemSvgPath-grey" fill-rule="nonzero" d="M14.8826768,30.8902697 C14.7041358,28.9614609 14.7139674,27.5758582 14.9121715,26.7334614 C15.1681851,25.6470494 16.5650521,19.8116647 16.5650521,19.8116647 C16.5650521,19.8116647 16.1438684,18.9782048 16.1438684,17.7437517 C16.1438684,15.808726 17.2788228,14.3632851 18.6933866,14.3632851 C19.8967687,14.3632851 20.4772236,15.2550289 20.4772236,16.3239557 C20.4772236,17.5187758 19.7068231,19.3045947 19.3092351,20.9610233 C18.9777151,22.3470146 20.0135675,23.4777224 21.3962771,23.4777224 C23.9009635,23.4777224 25.8275546,20.8677691 25.8275546,17.1002973 C25.8275546,13.7652922 23.4019139,11.4351016 19.939241,11.4351016 C15.9303271,11.4351016 13.5766533,14.4064152 13.5766533,17.4779771 C13.5766533,18.6751285 14.0426689,19.9573744 14.6254834,20.6556157 C14.7265339,20.7628604 14.7636516,20.9144161 14.7234056,21.0554432 C14.6160451,21.4960696 14.3777283,22.4414345 14.3317166,22.6349371 C14.2691879,22.889055 14.1276136,22.9438418 13.8598021,22.8202799 C12.0995609,22.0112993 11,19.4689553 11,17.4266872 C11,13.0332463 14.2290752,9 20.3108737,9 C25.1999082,9 29,12.4422475 29,17.0420134 C29,21.8411103 25.9384545,25.7041676 21.6865046,25.7041676 C20.2577833,25.7041676 18.9163663,24.9697904 18.4562496,24.1036916 C18.4562496,24.1036916 17.7495576,26.7637691 17.5784886,27.4142175 C17.3566887,28.2566142 16.5145231,29.7852084 15.0519915,32 L14.8826768,30.8902697 Z"></path>
+                    </g>
+                  </svg>
             </div>
-            <div>
-                <p>Connect with us</p>
-                <div>
-                    <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
-                        <path class="eastendFooterSocialIcons_listItemSvgPath-grey"
-                            d="M17.0680736,16.6145435 L17.0680736,14.6052554 C17.0680736,13.7187702 17.0904121,12.3525954 17.7335254,11.5060843 C18.4119099,10.6090177 19.3418964,10 20.9432132,10 C23.5509376,10 24.6490506,10.3715243 24.6490506,10.3715243 L24.132914,13.4342484 C24.132914,13.4342484 23.2711187,13.1861737 22.4669332,13.1861737 C21.6627476,13.1861737 20.9432132,13.4742226 20.9432132,14.2772324 L20.9432132,16.6145435 L24.2399036,16.6145435 L24.0094645,19.6055494 L20.9432132,19.6055494 L20.9432132,30 L17.0680736,30 L17.0680736,19.6055494 L15,19.6055494 L15,16.6145435 L17.0680736,16.6145435 Z"
-                            id="Facebook" fill="#FFFFFF"></path>
-                    </svg>
-
-                    <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40"
-                        version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <circle id="Oval-2-Copy-2" class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20">
-                        </circle>
-                        <path class="eastendFooterSocialIcons_listItemSvgPath-grey"
-                            d="M27.3656846,14.7303293 C28.1998845,14.2311958 28.8399769,13.4385904 29.1415367,12.4969382 C28.3604853,12.9590988 27.4974003,13.2941652 26.5753899,13.4744079 C25.8405546,12.6910456 24.7902946,12.2 23.6279607,12.2 C21.3991912,12.2 19.5909879,14.0093588 19.5909879,16.2392837 C19.5909879,16.5558637 19.6256499,16.8632005 19.694974,17.1589832 C16.3385326,16.9891392 13.3633738,15.3842865 11.3703062,12.9371462 C11.0225303,13.5367995 10.8238013,14.2311958 10.8238013,14.9706528 C10.8238013,16.369844 11.536684,17.607279 12.6204506,18.3317158 C11.9595609,18.3120739 11.3356441,18.1295205 10.7902946,17.8279607 L10.7902946,17.877643 C10.7902946,19.8348931 12.1825534,21.4674754 14.0311958,21.8383593 C13.6926632,21.9331023 13.3356441,21.9804737 12.9670711,21.9804737 C12.7071057,21.9804737 12.4529174,21.9562103 12.2068169,21.9088388 C12.7209705,23.5125361 14.2114385,24.680647 15.9792028,24.7129983 C14.5973426,25.7956095 12.8549971,26.4414789 10.9636049,26.4414789 C10.6377816,26.4414789 10.3154246,26.4229925 10,26.3860196 C11.7874061,27.5310225 13.9110341,28.2 16.1906412,28.2 C23.6198729,28.2 27.6811092,22.0463316 27.6811092,16.7072213 C27.6811092,16.5327556 27.677643,16.3571346 27.6707106,16.1849798 C28.4598498,15.6153668 29.1450029,14.9047949 29.6845754,14.0937031 C28.961294,14.4160601 28.1825534,14.6321202 27.3656846,14.7303293 Z"
-                            id="Twitter" fill="#FFFFFF"></path>
-                    </svg>
-                    <svg class="eastendFooterSocialIcons_listItemSvg" width="40px" height="40px" viewBox="0 0 40 40"
-                        version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <circle class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
-                        <path class="eastendFooterSocialIcons_listItemSvgPath-grey"
-                            d="M17,23.6363636 L17,16.3636364 L23,20.000139 L17,23.6363636 Z M31.4984545,14.4984516 C31.2224545,13.5149677 30.4091818,12.7405161 29.3766364,12.4776774 C27.5050455,12 20,12 20,12 C20,12 12.4949545,12 10.6233636,12.4776774 C9.59081818,12.7405161 8.77754545,13.5149677 8.50154545,14.4984516 C8,16.2809032 8,20 8,20 C8,20 8,23.7189677 8.50154545,25.5015484 C8.77754545,26.4850323 9.59081818,27.2594839 10.6233636,27.5224516 C12.4949545,28 20,28 20,28 C20,28 27.5050455,28 29.3766364,27.5224516 C30.4091818,27.2594839 31.2224545,26.4850323 31.4984545,25.5015484 C32,23.7189677 32,20 32,20 C32,20 32,16.2809032 31.4984545,14.4984516 Z"
-                            fill="#FFFFFE"></path>
-                    </svg><svg class="eastendFooterSocialIcons_listItemSvg" xmlns="http://www.w3.org/2000/svg"
-                        width="40" height="40" viewBox="0 0 40 40">
-                        <g fill="none" fill-rule="evenodd">
-                            <circle class="eastendFooter_fill_hover-grey" cx="20" cy="20" r="20"></circle>
-                            <path class="eastendFooterSocialIcons_listItemSvgPath-grey" fill-rule="nonzero"
-                                d="M14.8826768,30.8902697 C14.7041358,28.9614609 14.7139674,27.5758582 14.9121715,26.7334614 C15.1681851,25.6470494 16.5650521,19.8116647 16.5650521,19.8116647 C16.5650521,19.8116647 16.1438684,18.9782048 16.1438684,17.7437517 C16.1438684,15.808726 17.2788228,14.3632851 18.6933866,14.3632851 C19.8967687,14.3632851 20.4772236,15.2550289 20.4772236,16.3239557 C20.4772236,17.5187758 19.7068231,19.3045947 19.3092351,20.9610233 C18.9777151,22.3470146 20.0135675,23.4777224 21.3962771,23.4777224 C23.9009635,23.4777224 25.8275546,20.8677691 25.8275546,17.1002973 C25.8275546,13.7652922 23.4019139,11.4351016 19.939241,11.4351016 C15.9303271,11.4351016 13.5766533,14.4064152 13.5766533,17.4779771 C13.5766533,18.6751285 14.0426689,19.9573744 14.6254834,20.6556157 C14.7265339,20.7628604 14.7636516,20.9144161 14.7234056,21.0554432 C14.6160451,21.4960696 14.3777283,22.4414345 14.3317166,22.6349371 C14.2691879,22.889055 14.1276136,22.9438418 13.8598021,22.8202799 C12.0995609,22.0112993 11,19.4689553 11,17.4266872 C11,13.0332463 14.2290752,9 20.3108737,9 C25.1999082,9 29,12.4422475 29,17.0420134 C29,21.8411103 25.9384545,25.7041676 21.6865046,25.7041676 C20.2577833,25.7041676 18.9163663,24.9697904 18.4562496,24.1036916 C18.4562496,24.1036916 17.7495576,26.7637691 17.5784886,27.4142175 C17.3566887,28.2566142 16.5145231,29.7852084 15.0519915,32 L14.8826768,30.8902697 Z">
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-        </section>
+        </div>
+       </section>
         <section>
             <div>
                 <h1>AWADH STORE</h1>
@@ -764,7 +633,6 @@
     </footer>
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
@@ -785,6 +653,5 @@
         });
     </script>
 </body>
-<script src="./src/index.js"></script>
-
+<script src="../src/search.js"></script>
 </html>
