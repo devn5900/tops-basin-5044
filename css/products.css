@@ -12,25 +12,29 @@
     width: 33%;
 }
 
-.refine>div:first-child {
+.refine>div+div {
     border-bottom: 1px solid lightgray;
     margin-bottom: 50px;
+    padding-bottom: 20px;
     font-size: 17px;
 }
 
-.refine>div:nth-child(2)>h3,.refine>div:nth-child(3)>h3 {
+.refine>div+div>h3,.refine>div+div h3 {
     border-bottom: 1px solid lightgray;
     padding-bottom: 20px;
 }
-
-.refine>div:nth-child(2),.refine>div:nth-child(3) {
+.refine>div+div select{
+    padding: 10px;
+}
+.refine>div:nth-child(2),.refine>div+div {
     border-right: 1px solid lightgray;
     padding-right: 50px;
 }
 
-#allPro>.refine>div:nth-child(2) input {
+#allPro>.refine>div+div input {
     padding: 50px;
-    width: 20px;
+    width: 15px;
+    height: 15px;
     margin-right: 10px;
 }
 

@@ -1,0 +1,58 @@
+.del{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    
+}
+#p{
+    background-color: rgb(244, 244, 244);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.paymentCard{
+    display: flex;
+    justify-content: space-around;
+align-items: center;
+}
+.paymentCard form{
+    width: 25%;
+    box-shadow: 0px 3px 8px rgb(218, 217, 217);
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+}
+.paymentCard>form>div>div:nth-child(odd){
+text-align: center;
+text-transform: uppercase;
+}
+.paymentCard>form>div>div:nth-child(even){
+        display: flex;
+        flex-direction: column;
+}
+.paymentCard>form>div>div:nth-child(even) label{
+
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.paymentCard>form>div>div:nth-child(even) input{
+
+    padding: 15px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.paymentCard>form>div>div:nth-child(even) input[type="submit"]{
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.paymentCard>form>div>div:nth-child(even) input[type="submit"]:hover{
+    background-color:white ;
+    color: black;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+}

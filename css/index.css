@@ -92,10 +92,17 @@
     text-align: center;
     margin-left: 20px;
   }
- 
+.eltaCart>div>p:nth-child(2){
+    cursor: pointer;
+
+}
   #secondSec>.eltaMain>.eltaCart>div>img,
   #pro>.p>.product>.productItem>.item>img{
     max-width: 90%;
+  }
+
+  .productItem>.item>p:nth-child(2){
+      cursor: pointer;
   }
   #secondSec>.eltaMain>.eltaCart>div>button,
   #pro>.p>.product>.productItem>.item>button
@@ -228,6 +235,8 @@ width: 90%;
 }
 footer{
   border-top: 1px solid lightgray;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 footer>section:nth-child(2){
   width: 90%;
@@ -257,10 +266,12 @@ color: rgb(103, 98, 98);
   border-bottom: 1px solid lightgray;
 
 }
-#si>div:first-child>button{
+#si>div:first-child>a{
 background-color: black;
 padding: 10px 35px;
 text-transform: uppercase;
 color: white;
+text-decoration: none;
 cursor: pointer;
 }
+
