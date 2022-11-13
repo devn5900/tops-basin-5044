@@ -41,7 +41,7 @@ function alertBox(msg,color){
         
         alert.innerHTML='';
     alert.style.visibility="hidden";
-            window.location.href='./index.html'
+            window.location.href='../index.html'
       }, 1050);
   }, 1000);
   }

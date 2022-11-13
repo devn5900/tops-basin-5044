@@ -366,6 +366,7 @@ let lg= JSON.parse(localStorage.getItem("signup"));
     });
     localStorage.setItem("signup",JSON.stringify(lg));
     console.log("logout")
+    window.location.href='../index.html';
 });
 
 document.querySelector("#srbtn").addEventListener("click",()=>{
